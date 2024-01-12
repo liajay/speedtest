@@ -39,6 +39,7 @@ public class serverUDPThread extends Thread{
             startTime = System.currentTimeMillis();
             int cnt = 0;
             int delayTime = 0,totalDelayTime = 0;
+            
             while (true){
                 this.reciDatagramPacket = new DatagramPacket(this.reciData,this.reciData.length);
                 this.serverSocket.receive(this.reciDatagramPacket); 
