@@ -53,6 +53,7 @@ public class serverUDPThread extends Thread{
                     endTime = System.currentTimeMillis();
                     int TotalTime = (int)(endTime-startTime);
                     long speed = ((long)reciPacketNumber * lengthPerPacket * 1000) / (1024 * 1024 *TotalTime);
+                    System.out.println("\n" + "------------------------");
                     System.out.println("Total packet number: "+reciPacketNumber);
                     System.out.println("Total data: "+((long)reciPacketNumber * lengthPerPacket * 1000)+" bytes");
                     System.out.println("Time: "+TotalTime+"ms");
@@ -60,6 +61,7 @@ public class serverUDPThread extends Thread{
                     System.out.println("Min delay time: "+minDelayTime+"ms");
                     System.out.println("Avg delay time: "+avgDelayTime+"ms");
                     System.out.println("Speed: "+ speed +"MB/s");
+                    System.out.println("------------------------" + "\n");
                     break;
                 }
 

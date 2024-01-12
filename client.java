@@ -42,13 +42,14 @@ public class client {
 
             FileInputStream sendFileData = new FileInputStream(args[2]);
 
-            int lengthPerPacket = 65507;
+            int lengthPerPacket = 1024;
             int sizeOfData = sendFileData.available();
             int sendSize = sizeOfData / (lengthPerPacket - infoHeader.infoHeaderLength) + 1;
             sendInfoHeader senfInfo = new sendInfoHeader(System.currentTimeMillis(), 1, (short)sendInfoHeader.infoHeaderLength, sendSize, 1234, lengthPerPacket);
             sendToServer.write(senfInfo.toBytes());
 
             /*------------开始传输-------------- */
+            Thread.sleep(1000);
             System.out.println("start send");
             int port = recvFromServer.readInt();
             clientUDPThread clientUDPThread = new clientUDPThread(serverIp, port, lengthPerPacket, sendFileData);
