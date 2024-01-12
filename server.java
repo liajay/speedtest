@@ -72,7 +72,7 @@ class serverTCPThread extends Thread{
             recvFromClient.read(infoHeaderBytes);
             sendInfoHeader infoHeader = new sendInfoHeader(infoHeaderBytes);
             infoHeader.showInfo();
-
+            
             /*------------创建一个UDP线程开始接受-------------- */
             System.out.println("start receive");
 

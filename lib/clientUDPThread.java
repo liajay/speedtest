@@ -5,7 +5,6 @@ import java.io.*;
 /*
  * 用于传输UDP数据包的线程
  * 需要指定目标地址、目标端口、单个数据包长度、文件名
- * 
  */
 
 public class clientUDPThread extends Thread{
