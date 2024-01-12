@@ -64,10 +64,12 @@ public class sendInfoHeader extends infoHeader{
     }
 
     public void showInfo(){
+        System.out.println("----------------sendInfoHeader----------------"+ "\n");
         super.showInfo();
         System.out.println("totalPacketNumber: "+this.totalPacketNumber);
         System.out.println("requestPort: "+this.requestPort);
         System.out.println("lengthPerPacket: "+this.lengthPerPacket);
+        System.out.println("----------------------------------------------" + "\n");
     }
     
 }

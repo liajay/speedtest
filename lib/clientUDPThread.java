@@ -28,6 +28,8 @@ public class clientUDPThread extends Thread{
             this.port = port;
             this.lengthPerPacket = lengthPerPacket;
             this.sendFileData = sendFileData;
+
+            System.out.println("\nClient UDP thread init \nAddress: " + address + "\nPort: " + port + "\nlengthPerPacket: " + lengthPerPacket + "\nfileName: " + fileName);
         }
         catch(Exception e){
             System.out.println("Error: "+e);
